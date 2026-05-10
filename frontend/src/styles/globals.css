@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Orbitron:wght@400;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0c0e;
+  --bg-secondary: #0f1214;
+  --bg-card: #111416;
+  --bg-card-hover: #161a1d;
+  --border-color: #1e2428;
+  --border-accent: #2a3038;
+  --gold: #c8922a;
+  --gold-light: #e0a83a;
+  --gold-dim: #8a6420;
+  --green-active: #3ddc84;
+  --green-dim: #1e6e42;
+  --red-alert: #e05252;
+  --orange-warn: #e07a3a;
+  --cyan: #4ab8c8;
+  --text-primary: #d4cfc8;
+  --text-secondary: #8a8880;
+  --text-dim: #4a4845;
+  --text-gold: #c8922a;
+  --font-display: 'Orbitron', monospace;
+  --font-ui: 'Rajdhani', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 2px;
+}
+
+/* Scanline overlay effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+}
+
+input {
+  font-family: var(--font-mono);
+}
